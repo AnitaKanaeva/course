@@ -38,7 +38,8 @@ def get_regions(html):
 def write_tsv(html):
     with open('bio.tsv','wt',encoding="utf-8") as t:
         t.write('id    name    date_of_birth    was_chosen    nominations    education    job'+'\n')
-        #  ...будет дописываться
+        #  ...будет дописываться, возможно заменится на csv
+        #  pandas
 
 
 def get_data_bio(html):
@@ -53,7 +54,6 @@ def main():
     #  надо придумать, как подставить регион в ссылку
     #  в ссылке регион выглядит как-то так: Архангельская+область
     #  в chrome можно писать ссылки прямо как в примере, если не заработает, надо будет перевести в вид %D0%90 и т.д.
-    #  blahblah
     r_url = 'https://candidates.golosinfo.org/p?page={0}&q%5Bdistr%5D=&q%5Bed%5D=&q%5Belvl%5D=&q%5Bgroup%5D=&q%5Bn%5D=&q%5Bp%5D=&q%5Br%5D={1}&q%5Bs%5D=&q%5Bsort%5D=&search=%D0%98%D1%81%D0%BA%D0%B0%D1%82%D1%8C&utf8=%E2%9C%93'
     html = get_html(url)
     reg = get_regions(html)
