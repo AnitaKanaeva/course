@@ -103,7 +103,7 @@ def main():
                                 'education': education,
                                 'job': job}
                 write_tsv(out_data_bio)
-                print(out_data_bio)
+                #print(out_data_bio)
 
 
 if __name__ == '__main__':
